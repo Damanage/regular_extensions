@@ -13,9 +13,15 @@ let exOne = 'Ехал путин через реку, видит Путин в �
 
 // console.log(exOne.replace(/Пу/gis, '$&-пу'));
 // console.log(exOne.replace(/(пу)(ин)/ig, "$2$1"));
+// console.log(exOne.replace(/Путин/ig, myFunc));
+console.log(exOne.replace(/(путин) (через)/g, secFunc));
+
+// Функции
+
+function secFunc(match, firstParam, secondParam){
+    return `${secondParam} and ${firstParam}`; 
+}
 
 function myFunc(match, offset, str){
     return `Павло-${match}ская лавра`;
 }
-
-console.log(exOne.replace(/Путин/ig, myFunc));
