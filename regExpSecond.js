@@ -1,10 +1,10 @@
 // методы объекта RegExp
 let pattern         = /дрои/g,
-    digPattern      = /\d/g,                 // поиск одной цифры
-    strPattern      = /эти\s\d/i,            // поиск слова с пробелом цифрой после него
-    notDigPattern   = /эти \D/i,             // поиск слова БЕЗ цифры за ним
-    pointPattern    = /./;                   // поиск любого символа   
-
+    digPattern      = /\d/g,            // поиск одной цифры
+    strPattern      = /эти\s\d/i,       // поиск слова с пробелом цифрой после него
+    notDigPattern   = /эти \D/i,        // поиск слова БЕЗ цифры за ним
+    pointPattern    = /./,              // поиск любого символа   
+    phonesPattern   = /\+7\(+[0-9]+\)\d+-\d+-\d+/g; 
 
 let str     = 'Это не те дроиды которых вы ищете, эти иные дроиды.Эти 2 дроида нам нужны';
 let email   = 'joe@mail.ru penis_mail.ru penis@google.com derongar@gmail.com @gmail mail.eu';
@@ -14,7 +14,7 @@ let phones  = 'Мой номер телефона: +7(909)164-39-45, а мой 1
 // console.log(pattern.exec(str));      // Метод .exec() возвращает массив с элементом поиска,индексом и инпут
 // console.log(pattern.lastIndex);      // Свойство lastIndex возвращает последний индекс при выставленном флаге g
 // console.log(email.match(/[a-zA-Z_0-9]+@[a-z]+\.\w+/g));
-console.log(phones.match(/\+7\(+[0-9]+\)\d+-\d+-\d+/g));
+console.log(phones.match(phonesPattern));
 
 //Синтаксис
 
